@@ -14,6 +14,8 @@
 
 ## 使用步骤
 
+普通用户可从 [Releases](https://github.com/Yelina02/windows-browser-association-fix/releases) 下载 ZIP，全部解压后双击 **Start.cmd**，按中英文菜单操作。详见 [快速开始](QUICKSTART.md)。菜单默认只检查状态，修复操作才会请求管理员权限及确认。以下为命令行用法。
+
 下载完整仓库，检查脚本后，在仓库目录中打开 PowerShell。保留入口脚本旁的 `lib/` 和 `vendor/`。如果 Windows 阻止可信的下载文件，请先检查再解除下载标记，无需修改全局执行策略。
 
 若 Windows PowerShell 的本地默认策略为 `Restricted`，可使用仅对当前进程生效的策略运行已检查的脚本，例如 `powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File .\Fix-BrowserAssociation.ps1 -Action Status`。登录任务也会为受保护的本地代码快照使用此进程级策略，不覆盖组织的组策略。

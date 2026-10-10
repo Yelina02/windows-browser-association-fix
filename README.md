@@ -1,5 +1,7 @@
 # Windows Browser Association Fix
 
+For a double-click menu, download the ZIP from [Releases](https://github.com/Yelina02/windows-browser-association-fix/releases), extract all files, and open **Start.cmd**. See [Quick start / 快速开始](QUICKSTART.md). The menu checks status first; repair requires administrator approval and confirmation.
+
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 Repair stale HTTP/HTTPS associations used by legacy apps that open links in Edge despite another default browser. The tool synchronizes legacy **`UserChoice`** records with the user's existing **`UserChoiceLatest`** selection, with backups, valid legacy hashes, rollback, and UCPD restoration.
