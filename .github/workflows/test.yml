@@ -13,6 +13,11 @@ jobs:
         shell: [powershell, pwsh]
     steps:
       - uses: actions/checkout@v4
-      - name: Safe tests / 无系统变更测试
-        shell: ${{ matrix.shell }}
+      - name: Windows PowerShell tests / Windows PowerShell 测试
+        if: matrix.shell == 'powershell'
+        shell: powershell
+        run: ./tests/Test-Repair.ps1
+      - name: PowerShell 7 tests / PowerShell 7 测试
+        if: matrix.shell == 'pwsh'
+        shell: pwsh
         run: ./tests/Test-Repair.ps1
