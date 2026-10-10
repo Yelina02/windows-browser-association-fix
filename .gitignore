@@ -1,0 +1,12 @@
+# Never publish machine-specific backups, logs, state, or staged code.
+state.json
+*-before.reg
+*.reg
+result.json
+*-result.json
+*.log
+*.tmp
+backups/
+runtime/
+artifacts/
+*.zip
